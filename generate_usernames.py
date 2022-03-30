@@ -7,7 +7,7 @@ def main(infile='names.txt', name=None, outfile='usernames.txt'):
         try:
             with open(infile, 'r') as fio:
                 lines = fio.readlines()
-                starting_names = [l.rstrip for l in lines]
+                starting_names = [l.rstrip() for l in lines]
         except FileNotFoundError:
             print(f"input file '{infile}' does not exist")
             return
